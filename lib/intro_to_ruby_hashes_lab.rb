@@ -7,8 +7,10 @@ def read_from_hash(hash, key)
 end
 
 def update_counting_hash(hash, key)
-  while hash[key] == nil do
+  if hash[key] == nil
     {key => 1}
-  end
+  else
   {key => hash[key] + 1}
+end
+hash
 end
